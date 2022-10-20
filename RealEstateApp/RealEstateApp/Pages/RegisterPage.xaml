@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RealEstateApp.Pages.RegisterPage"
+             Title="RegisterPage">
+
+    <VerticalStackLayout VerticalOptions="Center"
+                         Margin="20,0,20,0"
+                         Spacing="20">
+        <Image Source="dotnet_bot"
+               HorizontalOptions="Center"
+               HeightRequest="80"
+               WidthRequest="80"/>
+        <Label Text="Create a new account"
+               TextColor="#101010"
+               FontSize="Large"
+               HorizontalOptions="Center"/>
+        <Label Text="Please enter your information below to create a new account for using the app."
+               TextColor="LightSlateGrey"
+               FontSize="Small"
+               HorizontalOptions="Center"/>
+        <Entry x:Name="EntFullName"
+               Placeholder="Full Name"/>
+        <Entry x:Name="EntEmail"
+               Placeholder="Email"/>
+        <Entry x:Name="EntPhone"
+               Placeholder="Phone"/>
+        <Entry x:Name="EntPassword"
+               Placeholder="Password"
+               IsPassword="True"/>
+        <Button x:Name="BtnRegister"
+                Text="Register Now"
+                HeightRequest="50"
+                FontSize="Medium"
+                BackgroundColor="#1d94ab"
+                Clicked="BtnRegister_Clicked"/>
+
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Label Text="Already have an account? "
+                   FontSize="Medium"
+                   TextColor="#101010"/>
+            <Label Text="Sign In"
+                   FontSize="Medium"
+                   TextColor="#1d94ab"/>
+            <HorizontalStackLayout.GestureRecognizers>
+                <TapGestureRecognizer x:Name="TapLogin" Tapped="TapLogin_Tapped"/>
+
+            </HorizontalStackLayout.GestureRecognizers>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
